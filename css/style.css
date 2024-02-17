@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+  background-image: url(../images/bg-stars.svg);
+  background-color: #221d2b;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.title {
+  margin-top: 132px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 7.5px;
+  text-transform: uppercase;
+}
+
+.timeParent {
+  display: flex;
+  justify-content: center;
+  margin-top: 104px;
+  column-gap: 37px;
+}
+
+.timeContentParent {
+  text-align: center;
+}
+.timeItem {
+  position: relative;
+  border-radius: 8px;
+  background: rgb(52, 54, 80);
+  padding: 34px 26px 35px 26px;
+  width: 148px;
+}
+
+.darker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  border-radius: 0px 0px 8px 8px;
+  background: rgb(0, 0, 0);
+  opacity: 0.15;
+  border-bottom: 1px solid rgb(25, 26, 35);
+}
+
+.time {
+  color: rgb(251, 94, 132);
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 71px;
+  letter-spacing: -2.4px;
+}
+
+.timeItem:before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(25, 26, 35);
+  width: 12px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.timeItem:after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgb(25, 26, 35);
+  width: 12px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.timeContentParent p {
+  margin-top: 26px;
+  color: rgb(131, 133, 169);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 5.92px;
+}
+
+.footer {
+  position: absolute;
+  bottom: -152px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url(../images/pattern-hills.svg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 226px;
+}
+
+.footer ul {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+}
+
+@media screen and (max-width: 745px) {
+  .title {
+    margin: 142px auto 0 auto;
+    max-width: 327px;
+  }
+  .timeParent {
+    column-gap: 16px;
+  }
+
+  .timeItem {
+    padding: 17px 13px;
+    width: 70px;
+  }
+
+  .time {
+    font-size: 36px;
+    letter-spacing: -1.08px;
+  }
+  .timeContentParent p {
+    font-size: 7px;
+    line-height: 9px;
+    letter-spacing: 2.96px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  main {
+    padding: 0 10px;
+  }
+
+  .timeParent {
+    position: relative;
+    gap: 10px;
+    flex-wrap: wrap;
+    z-index: 50;
+    margin-bottom: 58px;
+  }
+
+  .footer {
+    position: relative;
+    top: 0;
+  }
+}
